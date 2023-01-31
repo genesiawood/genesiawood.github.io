@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "deploy": "yarn build && next export && gh-pages -b gh-pages -d out",
+    "deploy": "yarn build && next export && touch ./out/.nojekyll && gh-pages -b gh-pages -d out -t true",
     "start": "next start",
     "typecheck": "tsc"
   },
